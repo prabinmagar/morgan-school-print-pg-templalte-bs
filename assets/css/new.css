@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --blue-color: #0186be;
+    --light-blue-color: #b3e6e9;
+    --lora-font: 'Lora', serif;
+    --pauta-font: 'Patua One', cursive;
+    --roboto-font: 'Roboto', sans-serif;
+}
+body{
+    color: var(--blue-color);
+    font-family: var(--roboto-font);
+    font-size: 12px;
+}
+
+/* texts */
+.text-blue{color: var(--blue-color);}
+.text-light-blue{color: var(--light-blue-color);}
+.text-stretch{
+    display: inline-block;
+    transform: scale(1, 1.25);
+}
+/* backgrounds */
+.bg-blue{background-color: var(--blue-color);}
+.bg-light-blue{background-color: var(--light-blue-color);}
+/* font */
+.font-papua{font-family: var(--pauta-font)!important;}
+.font-roboto{font-family: var(--roboto-font)!important;}
+/* font weights */
+.fw-2{font-weight: 200!important;}
+.fw-3{font-weight: 300!important;}
+.fw-4{font-weight: 400!important;}
+.fw-5{font-weight: 500!important;}
+.fw-6{font-weight: 600!important;}
+.fw-7{font-weight: 700!important;}
+.fw-8{font-weight: 800!important;}
+/* font size */
+.fs-12{font-size: 12px!important;}
+.fs-13{font-size: 13px!important;}
+.fs-14{font-size: 14px!important;}
+.fs-15{font-size: 15px!important;}
+.fs-16{font-size: 16px!important;}
+.fs-17{font-size: 17px!important;}
+.fs-18{font-size: 18px!important;}
+.fs-19{font-size: 19px!important;}
+.fs-20{font-size: 20px!important;}
+.fs-22{font-size: 22px!important;}
+.fs-24{font-size: 24px!important;}
+.fs-26{font-size: 26px!important;}
+.fs-30{font-size: 30px!important;}
+
+/* forms */
+.form-label, .col-form-label{
+    font-weight: 500;
+}
+.form-control{
+    background-color: var(--light-blue-color);
+    border-radius: 0!important;
+    border: none!important;
+    height: 20px;
+}
+.form-control-bordered{
+    outline: 1px solid var(--blue-color);
+}
+.form-control-btm-only{
+    background-color: transparent!important;
+    border-bottom: 1px solid var(--blue-color)!important;
+}
+
+/* checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 45px;
+    background-color: var(--light-blue-color);
+    outline: 1px solid var(--blue-color);
+}
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--light-blue-color);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* table */
+.border-blue{
+    border: 1px solid var(--blue-color)!important;
+}
+.table{
+    color: var(--blue-color);
+    border: 1px solid var(--blue-color)!important;
+}
+
+/* button */
+.btn-borderless{
+    border: 0!important;
+    border-radius: 0;
+}
+
+/* section */
+.form-sec{
+    margin-top: 4px;
+}
+.form-sec-title{
+    background-color: var(--light-blue-color);
+    width: 45%;
+    margin-bottom: -5px;
+}
+.form-sec-content{
+    padding: 10px 15px;
+}
+.form-sec-title h3{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0px 18px;
+    letter-spacing: 1px;
+    font-family: var(--pauta-font);
+}
+.form-text{
+    opacity: 0.9;
+}
+
+/* ############################# */
+#printable{
+    padding: 25px 0;
+}
+.form-header{
+    font-family: var(--lora-font);
+}
+.form-header .logo-image{
+    width: 80px;
+    margin-right: 20px;
+}
+.form-header .logo-image img{
+    width: 100%;
+}
+.header-content{
+    line-height: 1.4;
+}
+.header-content .heading-1{
+    font-size: 30px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #0186be;
+}
+.header-content .heading-2{
+    margin-top: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    border-bottom: 3px solid #0186be;
+}
+.header-content .heading-3{
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.school-address{
+    letter-spacing: -0.5px;
+    margin-top: -5px;
+}
+.school-contact-info{
+    margin-top: -19px;
+}
+.profile-image{
+    height: 120px;
+    width: 110px;
+    position: relative;
+}
+.profile-image img{
+    width: 100%;
+    height: 100%;
+}
+.profile-image-background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-right: 5px solid var(--blue-color);
+    border-bottom: 5px solid var(--blue-color);
+    top: 4px;
+    right: -4px;
+}
+.application-title{
+    letter-spacing: -0.5px;
+    margin-top: -10px;
+}
+
+/* personal */
+.personal-sec .label-auto{
+    margin-top: -15px;
+}
+.personal-sec .form-elem > .row .form-control{
+    margin-top: -6px;
+}
+
+/* guardian */
+.guardian-sec .form-elem > .row{
+    margin-bottom: -5px;
+}
+
+/* proposed study */
+.proposed-study .checkmark, .lang .checkmark, .misc-sec .checkmark{
+    height: 15px;
+    width: 23px;
+}
+.proposed-study-sec .checkbox-label{
+    width: 37%;
+}
+
+/* qualifications */
+.qualification-sec .table thead th{
+    vertical-align: middle;
+}
+
+/* desire & sports */
+.desire-sec .checkmark, .sports-sec .checkmark{
+    width: 25px;
+}
+
+/* stmt */
+.stmt-sec .form-sec-title{
+    width: 100%;
+}
+
